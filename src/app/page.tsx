@@ -1,223 +1,192 @@
 
 import React from 'react';
-import { Heart, Sun, Smile, Users, Calendar, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { Heart, Sun, Smile, Users, Star, Phone, MessageCircle, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F9FAF8] text-[#4A5568] font-sans selection:bg-[#9AE6B4] selection:text-[#276749]">
-      {/* Top Bar */}
-      <div className="bg-[#E2E8F0] text-[#4A5568] py-2 px-4 text-xs flex justify-center md:justify-end gap-6 items-center">
-        <span className="flex items-center gap-1"><Phone size={12} /> 02-1234-5678</span>
-        <span className="flex items-center gap-1"><MapPin size={12} /> 서울시 송파구 위례성대로</span>
-        <span className="text-xs bg-white px-2 py-0.5 rounded-full font-bold text-[#48BB78]">상담 예약 필수</span>
+    <div className="min-h-screen bg-[#F0F4F8] text-[#4A5568] font-sans selection:bg-[#81E6D9] selection:text-[#234E52]">
+      {/* Top Banner */}
+      <div className="bg-[#2D3748] text-white text-xs py-2 px-4 text-center tracking-wide">
+        <span className="opacity-80">마음쉼터 아동발달센터는 </span>
+        <span className="font-bold text-[#81E6D9]">100% 예약제</span>
+        <span className="opacity-80">로 운영됩니다.</span>
       </div>
 
       {/* Navbar */}
-      <nav className="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-[#EDF2F7] shadow-sm">
+      <nav className="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-[#E2E8F0] shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#E6FFFA] rounded-full flex items-center justify-center">
-                <Heart size={20} className="text-[#38B2AC]" fill="#38B2AC" />
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-[#38B2AC] rounded-[14px] flex items-center justify-center text-white shadow-lg shadow-teal-100 transform rotate-3">
+                <Heart size={20} fill="currentColor" />
               </div>
-              <div>
-                <span className="block text-lg font-bold text-[#2D3748] tracking-tight">마음쉼터</span>
-                <span className="block text-xs text-[#718096]">아동발달센터</span>
+              <div className="leading-none">
+                <span className="block text-lg font-bold text-[#2D3748]">마음쉼터</span>
+                <span className="block text-[10px] text-[#718096] font-medium tracking-wider">CHILD CARE CENTER</span>
               </div>
             </div>
-            <div className="hidden md:flex space-x-8 text-sm font-medium text-[#718096]">
+            <div className="hidden md:flex space-x-10 text-sm font-bold text-[#718096]">
               <a href="#about" className="hover:text-[#38B2AC] transition-colors">센터소개</a>
               <a href="#program" className="hover:text-[#38B2AC] transition-colors">치료프로그램</a>
-              <a href="#experts" className="hover:text-[#38B2AC] transition-colors">전문가소개</a>
               <a href="#process" className="hover:text-[#38B2AC] transition-colors">이용안내</a>
+              <a href="#contact" className="hover:text-[#38B2AC] transition-colors">오시는길</a>
             </div>
-            <button className="hidden md:flex items-center gap-2 bg-[#38B2AC] text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-[#319795] transition-colors shadow-md shadow-teal-100">
+            <button className="bg-[#38B2AC] hover:bg-[#319795] text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-teal-100 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
               <MessageCircle size={16} />
-              예약 상담하기
+              상담 예약하기
             </button>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 md:py-40 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[60%] h-full bg-[#F0FFF4] rounded-l-[150px] -z-10 transform translate-x-32 hidden lg:block"></div>
-        <div className="absolute top-0 right-0 w-full h-[60%] bg-[#F0FFF4] rounded-b-[50px] -z-10 lg:hidden"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div className="space-y-10 animate-fade-in-up pt-10 lg:pt-0">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E6FFFA] text-[#319795] rounded-full text-sm md:text-base font-bold shadow-sm">
-              <Sun size={18} />
+      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+        {/* Soft Background Shapes */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E6FFFA] rounded-full blur-[100px] opacity-60 -translate-y-1/2 translate-x-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FEFCBF] rounded-full blur-[80px] opacity-60 translate-y-1/4 -translate-x-1/4"></div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+          <div className="space-y-8 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E2E8F0] rounded-full text-xs font-bold text-[#319795] shadow-sm">
+              <Sun size={14} className="text-[#F6E05E]" />
               <span>우리아이 마음 성장 파트너</span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#2D3748] leading-[1.2] tracking-tight">
-              천천히, 바르게 <br/>
-              <span className="text-[#38B2AC] relative inline-block">
-                함께 성장합니다
-                <svg className="absolute w-full h-4 -bottom-1 left-0 text-[#38B2AC] opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
-                </svg>
-              </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-[#2D3748] leading-[1.2]">
+              느려도 괜찮아요,<br/>
+              <span className="text-[#38B2AC]">올바르게</span> 자라도록<br/>
+              함께 걷겠습니다.
             </h1>
-            <p className="text-xl text-[#718096] leading-relaxed font-medium max-w-lg">
-              아이마다 피어나는 시기가 다릅니다.<br/>
-              조급해하지 않고 아이의 속도에 맞춰<br/>
-              잠재력을 깨워주는 따뜻한 동행이 되겠습니다.
+            <p className="text-lg text-[#718096] leading-relaxed">
+              아이마다 꽃피우는 시기는 다릅니다.<br/>
+              전문 치료사가 아이의 눈높이에서 잠재력을 깨워드립니다.
             </p>
-            <div className="flex gap-5 pt-4">
-              <button className="px-8 py-4 bg-[#2D3748] text-white rounded-xl font-bold text-lg hover:bg-[#1A202C] transition-colors shadow-xl shadow-gray-200 transform hover:-translate-y-1">
-                초기 상담 신청
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button className="px-8 py-4 bg-[#2D3748] text-white rounded-2xl font-bold text-lg hover:bg-[#1A202C] transition-all shadow-xl shadow-gray-200">
+                초기상담 신청하기
               </button>
-              <button className="px-8 py-4 bg-white border-2 border-[#E2E8F0] text-[#4A5568] rounded-xl font-bold text-lg hover:bg-[#F7FAFC] transition-colors hover:border-[#CBD5E0]">
-                치료 영역 보기
-              </button>
+              <div className="flex items-center gap-3 px-4">
+                <div className="flex -space-x-2">
+                  {[1,2,3].map(i => (
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
+                      <img src={`https://source.unsplash.com/random/100x100?face&sig=${i}`} className="w-full h-full object-cover"/>
+                    </div>
+                  ))}
+                </div>
+                <div className="text-xs text-[#718096]">
+                  <span className="font-bold text-[#2D3748]">1,200+</span> 명의 아이들이<br/>함께 성장하고 있어요
+                </div>
+              </div>
             </div>
           </div>
           
           <div className="relative">
-             <div className="absolute -top-12 -left-12 w-32 h-32 bg-[#F6E05E] rounded-full opacity-20 animate-bounce hidden md:block"></div>
-             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-[#F687B3] rounded-full opacity-10 hidden md:block"></div>
-             <img 
-               src="https://images.unsplash.com/photo-1596464716127-f9a865e0cb31?q=80&w=2070&auto=format&fit=crop" 
-               alt="Counseling" 
-               className="rounded-[3rem] shadow-2xl w-full object-cover z-10 relative transform rotate-2 hover:rotate-0 transition-transform duration-700 h-[400px] md:h-[600px]" 
-             />
-             <div className="absolute bottom-16 -left-8 md:-left-12 bg-white p-8 rounded-2xl shadow-xl z-20 max-w-sm animate-float hidden md:block">
-               <div className="flex items-center gap-4 mb-3">
-                 <div className="w-12 h-12 bg-[#E6FFFA] rounded-full flex items-center justify-center text-[#38B2AC]">
-                   <Smile size={28} />
-                 </div>
-                 <div>
-                   <p className="font-bold text-[#2D3748] text-lg">맞춤형 발달 검사</p>
-                   <p className="text-sm text-[#718096]">전문 임상심리사 진행</p>
-                 </div>
-               </div>
-               <p className="text-base text-[#718096] bg-[#F7FAFC] p-4 rounded-xl italic">
-                 "우리 아이의 강점을 발견하고 <br/> 부족한 부분을 채워주세요."
-               </p>
-             </div>
+            <div className="absolute inset-0 bg-[#38B2AC] rounded-[3rem] rotate-3 opacity-10 transform scale-105"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1596464716127-f9a865e0cb31?q=80&w=2070&auto=format&fit=crop" 
+              className="rounded-[3rem] shadow-2xl relative z-10 w-full h-[500px] object-cover"
+              alt="Counseling"
+            />
+            
+            {/* Floating Card */}
+            <div className="absolute bottom-10 -left-10 bg-white p-6 rounded-3xl shadow-xl z-20 max-w-xs animate-bounce-slow hidden md:block">
+              <div className="flex gap-4 items-center mb-3">
+                <div className="w-12 h-12 bg-[#FEFCBF] rounded-2xl flex items-center justify-center text-[#D69E2E]">
+                  <Smile size={24} />
+                </div>
+                <div>
+                  <p className="font-bold text-[#2D3748]">놀이치료</p>
+                  <p className="text-xs text-[#718096]">정서적 안정감 형성</p>
+                </div>
+              </div>
+              <div className="w-full bg-[#EDF2F7] rounded-full h-2 overflow-hidden">
+                <div className="bg-[#38B2AC] w-3/4 h-full rounded-full"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Programs Section */}
-      <section id="program" className="py-24 md:py-32 bg-[#F9FAF8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D3748] mb-6">전문 치료 프로그램</h2>
-            <p className="text-lg text-[#718096] max-w-2xl mx-auto">각 분야별 전문가가 아이의 특성과 발달 단계에 맞는 <br className="hidden md:block"/> 1:1 맞춤형 치료 솔루션을 제공합니다.</p>
+      {/* Programs Grid */}
+      <section id="program" className="py-24 bg-[#F7FAFC]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[#2D3748] mb-4">맞춤형 치료 프로그램</h2>
+            <p className="text-[#718096]">각 분야 전문가가 아이의 특성에 맞는 1:1 솔루션을 제공합니다.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "언어치료", icon: "🗣️", desc: "의사소통에 어려움이 있는 아동을 위한 언어 발달 촉진", color: "bg-[#FED7D7]", text: "text-[#C53030]" },
-              { title: "놀이치료", icon: "🧸", desc: "놀이를 통해 정서를 표현하고 심리적 안정감 형성", color: "bg-[#FEFCBF]", text: "text-[#B7791F]" },
-              { title: "미술치료", icon: "🎨", desc: "미술 활동으로 내면을 표현하고 자아존중감 향상", color: "bg-[#C6F6D5]", text: "text-[#276749]" },
-              { title: "감각통합", icon: "🧩", desc: "감각 정보를 조직화하여 운동 능력과 학습 기초 형성", color: "bg-[#BEE3F8]", text: "text-[#2C5282]" },
-            ].map((prog, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-[#EDF2F7] group hover:-translate-y-1">
-                <div className={`w-14 h-14 ${prog.color} rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
-                  {prog.icon}
+              { title: "언어치료", desc: "의사소통 능력 향상 및 언어 발달 촉진", icon: "🗣️", bg: "bg-red-50", text: "text-red-500" },
+              { title: "놀이치료", desc: "놀이를 통한 심리 정서적 안정 도모", icon: "🧸", bg: "bg-yellow-50", text: "text-yellow-600" },
+              { title: "인지치료", desc: "학습 기초 능력 및 주의집중력 향상", icon: "🧠", bg: "bg-blue-50", text: "text-blue-500" },
+              { title: "감각통합", desc: "감각 정보 처리 능력 및 운동 발달", icon: "🧩", bg: "bg-green-50", text: "text-green-500" },
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-transparent hover:border-[#E2E8F0]">
+                <div className={`w-14 h-14 ${item.bg} rounded-2xl flex items-center justify-center text-2xl mb-6`}>
+                  {item.icon}
                 </div>
-                <h3 className={`text-xl font-bold mb-3 ${prog.text}`}>{prog.title}</h3>
-                <p className="text-sm text-[#718096] leading-relaxed mb-6 h-12">{prog.desc}</p>
-                <a href="#" className="inline-flex items-center text-sm font-bold text-[#4A5568] hover:text-[#38B2AC] transition-colors">
-                  자세히 보기 <span className="ml-1">&rarr;</span>
-                </a>
+                <h3 className="text-xl font-bold text-[#2D3748] mb-3">{item.title}</h3>
+                <p className="text-sm text-[#718096] leading-relaxed mb-6 h-10">{item.desc}</p>
+                <div className="flex items-center text-xs font-bold text-[#CBD5E0] gap-2">
+                  <CheckCircle2 size={14} className={item.text} />
+                  <span>전문가 1:1 매칭</span>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="process" className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#2D3748] mb-4">상담 및 이용 절차</h2>
-            <p className="text-[#718096]">체계적인 프로세스로 아이의 성장을 지원합니다.</p>
-          </div>
-          
-          <div className="relative">
-            {/* Connecting Line (Desktop) */}
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-[#E2E8F0] -z-10 transform -translate-y-1/2"></div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {[
-                { step: "01", title: "예약 문의", desc: "전화 및 온라인 예약" },
-                { step: "02", title: "초기 상담", desc: "주호소 문제 파악" },
-                { step: "03", title: "평가 및 검사", desc: "전문적인 발달 검사" },
-                { step: "04", title: "치료 계획", desc: "맞춤형 목표 설정" },
-              ].map((proc, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-xl text-center md:bg-transparent">
-                  <div className="w-12 h-12 bg-[#38B2AC] text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4 shadow-lg shadow-teal-100 z-10 relative">
-                    {proc.step}
-                  </div>
-                  <h3 className="font-bold text-[#2D3748] mb-2">{proc.title}</h3>
-                  <p className="text-sm text-[#718096]">{proc.desc}</p>
+      {/* Info / Footer */}
+      <footer className="bg-white border-t border-[#E2E8F0] pt-20 pb-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            <div>
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-8 h-8 bg-[#38B2AC] rounded-[10px] flex items-center justify-center text-white">
+                  <Heart size={16} fill="currentColor" />
                 </div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="mt-16 bg-[#E6FFFA] rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-[#B2F5EA]">
-            <div className="flex items-center gap-4">
-              <div className="bg-white p-3 rounded-full shadow-sm text-[#38B2AC]">
-                <Calendar size={24} />
+                <span className="font-bold text-xl text-[#2D3748]">마음쉼터</span>
               </div>
-              <div>
-                <h4 className="font-bold text-[#2D3748] mb-1">상담 시간 안내</h4>
-                <p className="text-sm text-[#718096]">평일 10:00 - 19:00 / 토요일 09:00 - 15:00 (일, 공휴일 휴무)</p>
-              </div>
+              <p className="text-sm text-[#718096] leading-relaxed">
+                보건복지부 발달재활서비스 제공기관<br/>
+                교육청 치료지원 서비스 제공기관<br/>
+                아동 심리 바우처 사용 가능
+              </p>
             </div>
-            <button className="bg-[#38B2AC] hover:bg-[#319795] text-white px-6 py-3 rounded-lg font-bold text-sm transition-colors w-full md:w-auto text-center">
-              온라인 예약 바로가기
-            </button>
-          </div>
-        </div>
-      </section>
+            
+            <div>
+              <h4 className="font-bold text-[#2D3748] mb-6">운영 시간</h4>
+              <ul className="space-y-3 text-sm text-[#718096]">
+                <li className="flex justify-between border-b border-[#EDF2F7] pb-2">
+                  <span>평일</span>
+                  <span className="font-bold">10:00 - 19:00</span>
+                </li>
+                <li className="flex justify-between border-b border-[#EDF2F7] pb-2">
+                  <span>토요일</span>
+                  <span className="font-bold">09:00 - 15:00</span>
+                </li>
+                <li className="text-xs text-[#A0AEC0] pt-2">* 일요일 및 공휴일은 휴무입니다.</li>
+              </ul>
+            </div>
 
-      {/* Footer */}
-      <footer className="bg-[#2D3748] text-[#CBD5E0] py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div>
-            <div className="flex items-center gap-2 mb-4 text-white">
-              <Heart size={20} className="text-[#38B2AC]" fill="#38B2AC" />
-              <span className="font-bold text-lg">마음쉼터 아동발달센터</span>
-            </div>
-            <p className="text-sm leading-relaxed mb-6">
-              보건복지부 발달재활서비스 제공기관<br/>
-              교육청 치료지원 서비스 제공기관
-            </p>
-            <div className="flex gap-4">
-               <div className="w-8 h-8 bg-[#4A5568] rounded-full flex items-center justify-center hover:bg-[#38B2AC] transition-colors cursor-pointer">
-                 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" className="w-4 h-4 invert opacity-70" alt="Blog"/>
-               </div>
-               <div className="w-8 h-8 bg-[#4A5568] rounded-full flex items-center justify-center hover:bg-[#38B2AC] transition-colors cursor-pointer">
-                 <Instagram size={16} />
-               </div>
+            <div>
+              <h4 className="font-bold text-[#2D3748] mb-6">오시는 길</h4>
+              <div className="text-sm text-[#718096] space-y-2">
+                <p className="flex items-start gap-2">
+                  <MapPin size={16} className="mt-0.5 shrink-0 text-[#38B2AC]" />
+                  서울시 송파구 위례성대로 123<br/>마음빌딩 3층
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone size={16} className="text-[#38B2AC]" />
+                  02-1234-5678
+                </p>
+              </div>
             </div>
           </div>
           
-          <div>
-            <h4 className="text-white font-bold mb-4">센터 정보</h4>
-            <ul className="space-y-2 text-sm">
-              <li>대표: 김마음 (임상심리전문가 1급)</li>
-              <li>사업자등록번호: 123-45-67890</li>
-              <li>주소: 서울특별시 송파구 위례성대로 123 3층</li>
-              <li>이메일: help@maum-center.com</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-white font-bold mb-4">협력 기관</h4>
-            <div className="grid grid-cols-2 gap-2 text-xs text-[#A0AEC0]">
-              <span>한국심리학회</span>
-              <span>한국발달지원학회</span>
-              <span>송파구청</span>
-              <span>강동송파교육지원청</span>
-            </div>
-            <p className="mt-8 text-xs text-[#718096]">&copy; 2024 Maum Shelter Center. All rights reserved.</p>
+          <div className="text-center border-t border-[#EDF2F7] pt-10 text-xs text-[#A0AEC0]">
+            <p>Copyright © 2024 Maum Shelter Center. All rights reserved.</p>
           </div>
         </div>
       </footer>
