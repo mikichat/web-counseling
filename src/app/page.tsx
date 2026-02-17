@@ -40,58 +40,60 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F0FFF4] rounded-l-[100px] -z-10 transform translate-x-20"></div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E6FFFA] text-[#319795] rounded-full text-sm font-bold">
-              <Sun size={16} />
+      <section className="py-20 md:py-40 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[60%] h-full bg-[#F0FFF4] rounded-l-[150px] -z-10 transform translate-x-32 hidden lg:block"></div>
+        <div className="absolute top-0 right-0 w-full h-[60%] bg-[#F0FFF4] rounded-b-[50px] -z-10 lg:hidden"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="space-y-10 animate-fade-in-up pt-10 lg:pt-0">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E6FFFA] text-[#319795] rounded-full text-sm md:text-base font-bold shadow-sm">
+              <Sun size={18} />
               <span>우리아이 마음 성장 파트너</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D3748] leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#2D3748] leading-[1.2] tracking-tight">
               천천히, 바르게 <br/>
               <span className="text-[#38B2AC] relative inline-block">
                 함께 성장합니다
-                <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#38B2AC] opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <svg className="absolute w-full h-4 -bottom-1 left-0 text-[#38B2AC] opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                 </svg>
               </span>
             </h1>
-            <p className="text-lg text-[#718096] leading-relaxed">
+            <p className="text-xl text-[#718096] leading-relaxed font-medium max-w-lg">
               아이마다 피어나는 시기가 다릅니다.<br/>
               조급해하지 않고 아이의 속도에 맞춰<br/>
               잠재력을 깨워주는 따뜻한 동행이 되겠습니다.
             </p>
-            <div className="flex gap-4 pt-4">
-              <button className="px-8 py-4 bg-[#2D3748] text-white rounded-lg font-bold hover:bg-[#1A202C] transition-colors shadow-lg">
+            <div className="flex gap-5 pt-4">
+              <button className="px-8 py-4 bg-[#2D3748] text-white rounded-xl font-bold text-lg hover:bg-[#1A202C] transition-colors shadow-xl shadow-gray-200 transform hover:-translate-y-1">
                 초기 상담 신청
               </button>
-              <button className="px-8 py-4 bg-white border border-[#E2E8F0] text-[#4A5568] rounded-lg font-bold hover:bg-[#F7FAFC] transition-colors">
+              <button className="px-8 py-4 bg-white border-2 border-[#E2E8F0] text-[#4A5568] rounded-xl font-bold text-lg hover:bg-[#F7FAFC] transition-colors hover:border-[#CBD5E0]">
                 치료 영역 보기
               </button>
             </div>
           </div>
           
           <div className="relative">
-             <div className="absolute -top-10 -left-10 w-20 h-20 bg-[#F6E05E] rounded-full opacity-20 animate-bounce"></div>
-             <div className="absolute -bottom-5 -right-5 w-32 h-32 bg-[#F687B3] rounded-full opacity-10"></div>
+             <div className="absolute -top-12 -left-12 w-32 h-32 bg-[#F6E05E] rounded-full opacity-20 animate-bounce hidden md:block"></div>
+             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-[#F687B3] rounded-full opacity-10 hidden md:block"></div>
              <img 
                src="https://images.unsplash.com/photo-1596464716127-f9a865e0cb31?q=80&w=2070&auto=format&fit=crop" 
                alt="Counseling" 
-               className="rounded-[2rem] shadow-2xl w-full object-cover z-10 relative transform rotate-2 hover:rotate-0 transition-transform duration-500" 
+               className="rounded-[3rem] shadow-2xl w-full object-cover z-10 relative transform rotate-2 hover:rotate-0 transition-transform duration-700 h-[400px] md:h-[600px]" 
              />
-             <div className="absolute bottom-10 left-[-20px] bg-white p-6 rounded-xl shadow-xl z-20 max-w-xs animate-float">
-               <div className="flex items-center gap-3 mb-2">
-                 <div className="w-10 h-10 bg-[#E6FFFA] rounded-full flex items-center justify-center text-[#38B2AC]">
-                   <Smile size={24} />
+             <div className="absolute bottom-16 -left-8 md:-left-12 bg-white p-8 rounded-2xl shadow-xl z-20 max-w-sm animate-float hidden md:block">
+               <div className="flex items-center gap-4 mb-3">
+                 <div className="w-12 h-12 bg-[#E6FFFA] rounded-full flex items-center justify-center text-[#38B2AC]">
+                   <Smile size={28} />
                  </div>
                  <div>
-                   <p className="font-bold text-[#2D3748]">맞춤형 발달 검사</p>
-                   <p className="text-xs text-[#718096]">전문 임상심리사 진행</p>
+                   <p className="font-bold text-[#2D3748] text-lg">맞춤형 발달 검사</p>
+                   <p className="text-sm text-[#718096]">전문 임상심리사 진행</p>
                  </div>
                </div>
-               <p className="text-sm text-[#718096] bg-[#F7FAFC] p-3 rounded-lg">
-                 "우리 아이의 강점을 발견하고 부족한 부분을 채워주세요."
+               <p className="text-base text-[#718096] bg-[#F7FAFC] p-4 rounded-xl italic">
+                 "우리 아이의 강점을 발견하고 <br/> 부족한 부분을 채워주세요."
                </p>
              </div>
           </div>
@@ -99,14 +101,14 @@ export default function Home() {
       </section>
 
       {/* Programs Section */}
-      <section id="program" className="py-24 bg-[#F9FAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#2D3748] mb-4">전문 치료 프로그램</h2>
-            <p className="text-[#718096]">각 분야별 전문가가 아이의 특성에 맞는 1:1 맞춤 치료를 제공합니다.</p>
+      <section id="program" className="py-24 md:py-32 bg-[#F9FAF8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2D3748] mb-6">전문 치료 프로그램</h2>
+            <p className="text-lg text-[#718096] max-w-2xl mx-auto">각 분야별 전문가가 아이의 특성과 발달 단계에 맞는 <br className="hidden md:block"/> 1:1 맞춤형 치료 솔루션을 제공합니다.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: "언어치료", icon: "🗣️", desc: "의사소통에 어려움이 있는 아동을 위한 언어 발달 촉진", color: "bg-[#FED7D7]", text: "text-[#C53030]" },
               { title: "놀이치료", icon: "🧸", desc: "놀이를 통해 정서를 표현하고 심리적 안정감 형성", color: "bg-[#FEFCBF]", text: "text-[#B7791F]" },
